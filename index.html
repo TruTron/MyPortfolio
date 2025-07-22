@@ -1,118 +1,127 @@
 <!-- 
     Name: Faisal Baig
-    Date: May 30, 2025
+    Date: July 21, 2025
     This is a my homepage which contains my logo and navigation bar at the top. Pages are formated using external
     stylesheet. A little paragraph about my profession and interests. At the bottom, footer is added
     with inforation about copyright, sitemap and email contact 
  -->
 
 <!DOCTYPE html>
+<!-- This declares the document type and version of HTML -->
 <html lang="en">
   <head>
+    <!-- The head section contains metadata and the page title -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--This makes the webpage responsive based on the device used. i.e. gives the browser instructions 
-             on how to control the page's dimensions and scaling.-->
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!--Link to external font-awesome font family-->
-
     <title>Faisal Baig</title>
-    <!-- The title element represents the document's title or name -->
-    <link rel="stylesheet" href="styles.css" />
-    <!--Link to external css stylesheet-->
   </head>
 
   <body>
+    <!-- Header contains the site branding and navigation -->
     <header>
-      <!-- The class attribute is used to point to a class name in a style sheet. -->
-      <div class="navbar">
-        <div class="logo">
-          <!-- href="#" moves the scroll position to the top -->
-          <a href="#"
-            ><img
-              src="images/unionpay.svg"
-              alt="My Logo"
-              width="100"
-              height="100"
-          /></a>
-        </div>
-        <!--Menus are created using unordered list in the header section-->
-        <ul class="links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact Me</a></li>
-        </ul>
-      </div>
+      <table width="100%">
+        <tr>
+            <td align="left">
+
+              <!-- Website logo -->
+                <a href="#">
+                      <img src="images/unionpay.svg" alt="My Logo" width="100" height="100" />
+                </a>
+            </td>
+
+      <!-- Navigation menu with page links -->
+          <td align="right">
+            <table>
+              <tr>
+                <nav>
+                  <!-- Navigation links placed horizontally using simple spacing -->
+                  <td><a href="index.html">Home</a></td>
+                  <td>&nbsp;|&nbsp;</td>
+                  <td><a href="interests.html">Our Specialties</a></td>
+                  <td>&nbsp;|&nbsp;</td>
+                  <td><a href="gallery.html">Gallery</a></td>
+                  <td>&nbsp;|&nbsp;</td>
+                  <td><a href="about.html">About Me</a></td>
+                  <td>&nbsp;|&nbsp;</td>
+                  <td><a href="contact.html">Contact Me</a></td>
+                </nav>
+              </tr>
+            </table>
+          </td>
     </header>
 
-    <main>
-      <!--Section tag id = hero is used in the CSS to format the text in this section -->
+    <!-- Main content of the webpage -->
+    <article>
+      <!-- Section for introduction -->
       <section id="hero">
-        <h1>Hello I'm Faisal, nice to meet you!</h1>
-        <p>
-          As an IT professional I speciale in setting up small businesses and
-          call centers which plays a crucial role in designing and deploying<br />
-          efficient and secure technical environments. My expertise includes
-          configuring workstations and servers, installing essential<br />
-          business and communication software, and building robust network
-          infrastructures. I ensure smooth connectivity, implement<br />
-          server and workstation security protocols, and deploy firewalls and
-          antivirus systems to protect sensitive data. My focus is<br />
-          on creating scalable, reliable systems tailored to the operational
-          needs of each business.
-        </p>
+        <table width="100%">
+          <tr>
+            <td align="center">
+              <h2>Hello I'm Faisal, nice to meet you!</h2>
+              <p align="center"><br /><br />
+                As an IT professional, I specialize in setting up small businesses and
+                call centers. My work includes deploying secure network environments,
+                configuring workstations and servers, and ensuring all infrastructure is
+                optimized for scalability and performance.
+              </p>
+              <!-- Section highlighting expertise -->
+              <h2>My Services</h2>
+              <p>
+                I provide comprehensive IT solutions, including network setup, system
+                security, firewall configuration, and software installation for business
+                operations. I focus on reliability, security, and long-term growth.
+              </p><br /><br /><br />
+              <img src="/images/RoboPeace.jpg" alt="Robot making peace sign">
+            </td>
+          </tr>
+        </table>
       </section>
-    </main>
+    </article>
+    <br /><br /><br /><br />
 
-    <br /><br />
+
+    <!-- Footer with 3 equal-width columns -->
     <footer>
-      <div class="container">
-        <div class="footer-content">
-          <h3>Contact Us</h3>
-          <p>Email:Info@example.com</p>
-          <p>Phone:+1 1234567890</p>
-          <p>Address:123 street</p>
-        </div>
-        <div class="footer-content">
-          <h3>Quick Links</h3>
-          <ul class="list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact Me</a></li>
-          </ul>
-        </div>
-        <div class="footer-content">
-          <h3>Follow Us</h3>
-          <ul class="social-icons">
-            <li>
-              <a href=""><i class="fab fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fab fa-instagram"></i></a>
-            </li>
-            <li>
-              <a href=""><i class="fab fa-linkedin"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="bottom-bar">
-        <p>&copy; 2025 FB Inc. All rights reserved</p>
-      </div>
+      <br /><br />
+      <table width="90%" align="center" border="0" cellspacing="20">
+        <tr>
+          <!-- Contact Us Column -->
+          <td width="33%" align="center" valign="top">
+            <h3>Contact Us</h3>
+            <p>Email: Info@example.com</p>
+            <p>Phone: +1 1234567890</p>
+            <p>Address: 123 Street</p>
+          </td>
+
+          <!-- Quick Links Column -->
+          <td width="33%" align="center" valign="top">
+            <h3>Quick Links</h3>
+            <p>
+              <a href="index.html">Home</a><br />
+              <a href="interests.html">Our Specialties</a><br />
+              <a href="gallery.html">Gallery</a><br />
+              <a href="about.html">About Me</a><br />
+              <a href="contact.html">Contact Me</a>
+            </p>
+          </td>
+
+          <!-- Follow Us Column -->
+          <td width="33%" align="center" valign="top">
+            <h3>Follow Us</h3>
+            <p>
+              <a href="#">Facebook</a><br />
+              <a href="#">Twitter</a><br />
+              <a href="#">Instagram</a><br />
+              <a href="#">LinkedIn</a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3" align="center">
+            <br />
+            <p>&copy; 2025 FB Inc. All rights reserved</p>
+          </td>
+        </tr>
+      </table>
     </footer>
   </body>
 </html>
