@@ -1,0 +1,439 @@
+/* Global Setting */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body#home {
+  height: 60vh;
+  background-color: rgb(255, 255, 255);
+  background-image: url("images/BlankCanvas2.jpg");
+  /* backgroud coverage cover to cover i.e. entire page width */
+  background-size:cover;
+  /* backgroud position to start of page */
+  background-position:initial;
+  /* backgroud set to no repeat */
+  background-repeat: no-repeat;
+  margin-bottom: 100px;
+}
+
+/* li tag formatting */
+li {
+  list-style: none;
+}
+
+/* a tag formatting */
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+
+/* a tag formatting when cursor hovers over an element */
+a:hover {
+  color: #f18930;
+}
+
+/* HEADER */
+
+header {
+  position: relative;
+  padding: 2px;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  /* max-width property set the maximum width of element */
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.navbar a {
+  display: inline;
+  padding: 10px;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  float: left;
+  
+}
+
+section {
+  margin-block: 500px;
+}
+
+/* HERO */
+
+section#hero {
+  height: calc(70vh - 680px);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-top: 200px;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  
+}
+
+#hero h3 {
+  font-size: 2rem;
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(252, 151, 0);
+  margin-bottom: 35px;
+  margin-top: 10px;
+}
+
+#hero p {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#heroimage {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* OUR SPECIALTIES - Top Black Bar Content */
+
+.containerInterest {
+  width: 1140px;
+  margin: auto;
+  justify-content: center;
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+
+.sidebar {
+  background-color: #1d1f22;
+  color: white;
+  width: 100%;
+  max-width: 300px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sidebar img.profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.sidebar h2 {
+  margin: 10px 0 5px;
+  font-size: 1.5em;
+}
+
+.sidebar p {
+  margin: 5px 0;
+}
+
+.sidebar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sidebar nav {
+  margin-top: 30px;
+}
+
+.sidebar nav a {
+  margin: 0 10px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.sidebar nav a:hover {
+  color: white;
+}
+
+.sidebar {
+  max-width: none;
+}
+
+/* OUR SPECIALTIES - Body Content */
+
+.main {
+  padding: 40px;
+  background-color: #f6f6f6;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.project {
+  text-align: center;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  background-color: #eaeaea;
+}
+
+.project h3 {
+  margin-top: 15px;
+  font-size: 1.3em;
+  padding-bottom: 0.55em;
+}
+
+.project p {
+  font-size: 1.0em;
+  color: #555;
+}
+
+
+/* GALLERY - Content */
+
+.wrapper {
+  max-inline-size: 1000px;
+  margin-inline: auto;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  cursor: pointer;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.orange-line {
+  width: 1000px;
+  height: 3px;
+  background-color: #ff7c43;
+  margin: 20px 0;
+}
+
+
+/* ABOUT ME PAGE - Content */
+
+.two-column-layout {
+  display: grid;
+  gap: 60px;
+  /* creates gap between two columns */
+  grid-template-columns: 1fr 1fr;
+  /* Use 1 fraction for each column */
+  justify-content: center;
+  text-align: justify;
+  color: rgb(255, 255, 255);
+  
+}
+
+.two-column-layout p {
+  font-family: Roboto; 
+  font-style: italic;
+  line-height: 1.8;
+  font-size: 1.4em;
+}
+
+.two-column-layout h1 {
+  font-size: 4em;
+  margin: 0;
+  background-color: #343434;
+}
+
+/* CONTACT ME PAGE - Content */
+
+.containerContact {
+  max-width: 960px;
+  margin: 60px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 220px;
+
+}
+
+.table-content th {
+  padding-right: 1rem;
+  text-align: left;
+
+}
+
+.form-section {
+  padding: 40px;
+}
+
+.form-section h2 {
+  margin-bottom: 10px;
+}
+
+.form-section p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.form-section .info {
+  margin: 20px 0;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.form-section input,
+.form-section textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.form-section button {
+  padding: 10px 15px;
+  font-size: 1em;
+  color: white;
+  background-color: #f7b733;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+/* FOOTER */
+
+footer {
+  background: #343434;
+  padding-top: 20px;
+  margin-top: 300px;
+}
+
+.container {
+  width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-content {
+  width: 33.3%;
+}
+
+.footer-content h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #f18930;
+}
+
+.footer-content p {
+  width: 190px;
+  margin: auto;
+  padding: 7px;
+  color: #fff;
+}
+
+.footer-content ul {
+  text-align: center;
+}
+
+.list {
+  padding: 0;
+}
+
+.list li {
+  width: auto;
+  text-align: center;
+  list-style-type: none;
+  padding: 7px;
+  position: relative;
+}
+
+.list li::before {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background: #f18930;
+  transition-duration: 0.5s;
+}
+
+.list li:hover::before {
+  width: 70px;
+}
+
+.social-icons {
+  text-align: center;
+  padding: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+}
+
+.social-icons i {
+  color: white;
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.social-icons i:hover {
+  color: #f18930;
+}
+
+.bottom-bar {
+  background: #f18930;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}
+
+.bottom-bar p {
+  color: #343434;
+  margin: 0;
+  font-size: 16px;
+  padding: 7px;
+}

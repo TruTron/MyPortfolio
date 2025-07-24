@@ -1,6 +1,6 @@
 <!-- 
     Name: Faisal Baig
-    Date: July 21, 2025
+    Date: July 24, 2025
     This is a my homepage which contains my logo and navigation bar at the top. Pages are formated using external
     stylesheet. A little paragraph about my profession and interests. At the bottom, footer is added
     with inforation about copyright, sitemap and email contact 
@@ -12,44 +12,116 @@
   <head>
     <!-- The head section contains metadata and the page title -->
     <meta charset="UTF-8">
+    
+    <!--Link to external font-awesome font family-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--Link to external google font family-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    
+    <!--Link to external css stylesheet-->
+    <link rel="stylesheet" href="styles.css">
+    
     <title>Faisal Baig</title>
   </head>
 
-  <body>
+  <body id="home">
     <!-- Header contains the site branding and navigation -->
     <header>
+      <!-- The class attribute is used to point to a class name in a style sheet. -->
+      <div class="navbar">
+          <div class="logo">
+            <!-- href="#" moves the scroll position to the top -->
+            <a href="#">
+              <img src="images/unionpay.svg" alt="My Logo" width="100" height="100">
+            </a>
+          </div>
       
-      <!-- Website logo -->
-                <a href="index.html">
-                      <img src="images/unionpay.svg" alt="My Logo" width="100" height="100">
-                </a>
 
-      <!-- Navigation menu with page links -->
-      <nav>
-        <!-- Navigation links placed horizontally using simple spacing -->
-        <a href="index.html">Home</a> |
-        <a href="services.html">Our Specialties</a> |
-        <a href="gallery.html">Gallery</a> |
-        <a href="about.html">About Me</a> |
-        <a href="contact.html">Contact Me</a>
-      </nav>
+          <!-- Navigation links placed horizontally using simple spacing -->
+          <ul class="links"></ul>
+            <a href="index.html">Home</a> |
+            <a href="interests.html">Our Specialties</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="about.html">About Me</a> |
+            <a href="contact.html">Contact Me</a>
+          </ul>
+      </div>
     </header>
- <br><br><br><br><br><br><br><br>
- <br><br><br><br><br><br><br><br>
+    
     <!-- Main content of the webpage -->
-    <article>
-      
-        <h3>About Me:  This page is under construction</h3>
-      
-    </article>
-  <br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br>
+    <main>
+      <section>
+        <div class="wrapper">
+          <div class="orange-line"></div>
+          <div class="two-column-layout">
+            <div><h1>ABOUT.</h1></div>
+            <p>
+              As an IT professional I speciale in setting up small businesses
+              and call centers which plays a crucial role in designing and
+              deploying efficient and secure technical environments. My
+              expertise includes configuring workstations and servers,
+              installing essential business and communication software, and
+              building robust network infrastructures. I ensure smooth
+              connectivity, implement server and workstation curity protocols,
+              and deploy firewalls and antivirus systems to protect sensitive
+              data. My focus is on creating scalable, reliable systems tailored
+              to the operational needs of each business.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-
-    <!-- Footer section containing contact and copyright -->
+    
+    
+    
+    <!-- Main content Ends -->
+    
     <footer>
-      <p>Contact: info@example.com | Phone: +1 123 456 7890</p>
-      <p>&copy; 2025 Faisal Baig. All rights reserved.</p>
+      <div class="container">
+        <div class="footer-content">
+          <h3>Contact Me</h3>
+          <p>Email:faisalbaig1@gmail.com</p>
+          <p>Phone:+1 1234567890</p>
+          <p>Address:123 street</p>
+        </div>
+        <div class="footer-content">
+          <h3>Quick Links</h3>
+          <ul class="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="interests.html">Our Specialties</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+        <div class="footer-content">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li>
+              <a href=""><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-linkedin"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <p>&copy; 2025 FB Inc. All rights reserved</p>
+      </div>
     </footer>
   </body>
 </html>
