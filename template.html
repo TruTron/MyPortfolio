@@ -1,17 +1,21 @@
 <!-- 
     Name: Faisal Baig
-    Date: July 24, 2025
+    Date: July 27, 2025
     This is a my homepage which contains my logo and navigation bar at the top. Pages are formated using external
     stylesheet. A little paragraph about my profession and interests. At the bottom, footer is added
     with inforation about copyright, sitemap and email contact 
  -->
 
 <!DOCTYPE html>
-<!-- This declares the document type and version of HTML -->
-<html lang="en">
-  <head>
+ <html lang="en">
+   <head>
     <!-- The head section contains metadata and the page title -->
     <meta charset="UTF-8">
+
+    <!--This makes the webpage responsive based on the device used. i.e. gives the browser instructions 
+    on how to control the page's dimensions and scaling.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     
     <!--Link to external font-awesome font family-->
     <link
@@ -20,7 +24,7 @@
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    />
+    >
     <!--Link to external google font family-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     
@@ -30,7 +34,8 @@
     <title>Faisal Baig</title>
   </head>
 
-  <body id="home">
+
+   <body id="home">
     <!-- Header contains the site branding and navigation -->
     <header>
       <!-- The class attribute is used to point to a class name in a style sheet. -->
@@ -41,18 +46,44 @@
               <img src="images/unionpay.svg" alt="My Logo" width="100" height="100">
             </a>
           </div>
-      
 
-          <!-- Navigation links placed horizontally using simple spacing -->
-          <ul class="links"></ul>
-            <a href="index.html">Home</a> |
-            <a href="interests.html">Our Specialties</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="about.html">About Me</a> |
-            <a href="contact.html">Contact Me</a>
-          </ul>
+         <ul class="links">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="interests.html">Our Specialties</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="about.html">About Me</a></li>
+           <li><a href="contact.html">Contact Me</a></li>
+         </ul>
+         <div class="toggle_btn">
+           <i class="fa-solid fa-bars"></i>
+         </div>
+ 
+         <ul class="dropdown_menu">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="interests.html">Our Specialties</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="about.html">About Me</a></li>
+           <li><a href="contact.html">Contact Me</a></li>
+         </ul>
+ 
+         <script>
+           const toggleBtn = document.querySelector('.toggle_btn');
+           const toggleBtnIcon = document.querySelector('.toggle_btn i');
+           const dropDownMenu = document.querySelector('.dropdown_menu');
+ 
+           toggleBtn.onclick = function () {
+             dropDownMenu.classList.toggle('open');
+             const isOpen = dropDownMenu.classList.contains('open');
+ 
+             toggleBtnIcon.classList = isOpen
+               ? 'fa-solid fa-xmark'
+               : 'fa-solid fa-bars';
+           };
+         </script>
       </div>
     </header>
+
+  <!-- Main content of goes here -->
 
 
     <footer>
