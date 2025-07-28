@@ -1,17 +1,20 @@
 <!-- 
     Name: Faisal Baig
-    Date: July 24, 2025
+    Date: July 27, 2025
     This is a my homepage which contains my logo and navigation bar at the top. Pages are formated using external
     stylesheet. A little paragraph about my profession and interests. At the bottom, footer is added
     with inforation about copyright, sitemap and email contact 
  -->
 
 <!DOCTYPE html>
-<!-- This declares the document type and version of HTML -->
-<html lang="en">
-  <head>
+ <html lang="en">
+   <head>
     <!-- The head section contains metadata and the page title -->
     <meta charset="UTF-8">
+
+    <!--This makes the webpage responsive based on the device used. i.e. gives the browser instructions 
+    on how to control the page's dimensions and scaling.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
     <!--Link to external font-awesome font family-->
@@ -31,7 +34,8 @@
     <title>Faisal Baig</title>
   </head>
 
-  <body id="home">
+
+   <body id="home">
     <!-- Header contains the site branding and navigation -->
     <header>
       <!-- The class attribute is used to point to a class name in a style sheet. -->
@@ -42,44 +46,113 @@
               <img src="images/unionpay.svg" alt="My Logo" width="100" height="100">
             </a>
           </div>
-      
-          <!-- Navigation links placed horizontally using simple spacing -->
-      
-            <a href="index.html">Home</a> |
-            <a href="interests.html">Our Specialties</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="about.html">About Me</a> |
-            <a href="contact.html">Contact Me</a>
+
+         <ul class="links">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="interests.html">Our Specialties</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="about.html">About Me</a></li>
+           <li><a href="contact.html">Contact Me</a></li>
+         </ul>
+         <div class="toggle_btn">
+           <i class="fa-solid fa-bars"></i>
+         </div>
+ 
+         <ul class="dropdown_menu">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="interests.html">Our Specialties</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="about.html">About Me</a></li>
+           <li><a href="contact.html">Contact Me</a></li>
+         </ul>
+ 
+         <script>
+           const toggleBtn = document.querySelector('.toggle_btn');
+           const toggleBtnIcon = document.querySelector('.toggle_btn i');
+           const dropDownMenu = document.querySelector('.dropdown_menu');
+ 
+           toggleBtn.onclick = function () {
+             dropDownMenu.classList.toggle('open');
+             const isOpen = dropDownMenu.classList.contains('open');
+ 
+             toggleBtnIcon.classList = isOpen
+               ? 'fa-solid fa-xmark'
+               : 'fa-solid fa-bars';
+           };
+         </script>
       </div>
     </header>
+ 
+    <!-- Flexible Grid content-->
+    <main class="content-container">
+       <div class="row">
+         <div class="side">
+         <h2>About Me</h2>
+         <p>Photo of Me</p>
+         <div class="image-container">
+           <img src="images/FaceBig.jpg" alt="Robo Peace Sign" class="responsive-image">
+         </div>
+         <h3>Services at a glance</h3>
+         <div class="image-container">
+           <img
+             src="images/CompChip.jpg"
+             alt="Robo Peace Sign"
+             class="responsive-image"
+           >
+         </div>
 
-    <!-- Main content of Index page -->
-    <main>
-      <!--Section tag id = hero is used in the CSS to format the text in this section -->
-      <section id="hero">
-        <h1>Hello I'm Faisal, nice to meet you!</h1>
-        <p>
-          As an IT professional, I specialize in setting up small businesses and
-          call centers. My work includes deploying secure network environments,
-          configuring workstations and servers, and ensuring all infrastructure is
-          optimized for scalability and performance.
-        </p>
-        <br>
-        
-          <img id="heroimage" src="images/RoboPeace.jpg" alt="Robot making peace sign">
-        
-        <h3>Small Business IT Specialist</h3>
-        <p>
-          I provide comprehensive IT solutions, including network setup, system
-          security, firewall configuration, and software installation for business
-          operations. I focus on reliability, security, and long-term growth.
-        </p>
-      </section>
+         <div class="image-container">
+           <img src="images/CardTap.jpg" alt="Robo Peace Sign" class="responsive-image">
+         </div>
+
+         <div class="image-container">
+           <img
+             src="images/CompDesk.jpg"
+             alt="Robo Peace Sign"
+             class="responsive-image"
+           >
+         </div>
+       </div>
+       <div class="main">
+         <h2>Hi I'm Faisal</h2>
+         <p>I'm an IT Specialist.</p>
+ 
+         <div class="image-main">
+           <img
+             src="images/RoboPeace.jpg"
+             alt="Robo Peace Sign"
+             class="responsive-image"
+           >
+         </div>
+ 
+         <h4>My Interests..</h4>
+         <p>
+           I'm responsible for a wide range of IT functions, focusing on the
+           infrastructure that allows devices to communicate and share data.
+         </p><br>
+ 
+         <h2>HELP DESK SUPPORT</h2>
+         <p>Call Center help desk support</p>
+         <div class="image-main">
+           <img
+             src="images/CompDesk2.jpg"
+             alt="Robo Peace Sign"
+             class="responsive-image"
+           >
+         </div>
+         <h4>What is Call Center Help Desk Support?</h4>
+         <p>
+           Help desks primarily provide technical support to customers,
+           employees, or both, addressing issues related to hardware, software,
+           networks, and other IT-related concerns. They may also handle general
+           inquiries and service requests.
+         </p>
+       </div>
+     </div>
     </main>
-    <br><br>
+ 
 
-
-<footer>
+     <footer>
       <div class="container">
         <div class="footer-content">
           <h3>Contact Me</h3>
@@ -121,3 +194,4 @@
     </footer>
   </body>
 </html>
+ 

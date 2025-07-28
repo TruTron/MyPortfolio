@@ -1,17 +1,20 @@
 <!-- 
     Name: Faisal Baig
-    Date: July 24, 2025
+    Date: July 27, 2025
     This is a my homepage which contains my logo and navigation bar at the top. Pages are formated using external
     stylesheet. A little paragraph about my profession and interests. At the bottom, footer is added
     with inforation about copyright, sitemap and email contact 
  -->
 
 <!DOCTYPE html>
-<!-- This declares the document type and version of HTML -->
-<html lang="en">
-  <head>
+ <html lang="en">
+   <head>
     <!-- The head section contains metadata and the page title -->
     <meta charset="UTF-8">
+    
+    <!--This makes the webpage responsive based on the device used. i.e. gives the browser instructions 
+    on how to control the page's dimensions and scaling.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!--Link to external font-awesome font family-->
     <link
@@ -30,6 +33,7 @@
     <title>Faisal Baig</title>
   </head>
 
+
   <body id="home">
     <!-- Header contains the site branding and navigation -->
     <header>
@@ -41,118 +45,96 @@
               <img src="images/unionpay.svg" alt="My Logo" width="100" height="100">
             </a>
           </div>
-      
 
-          <!-- Navigation links placed horizontally using simple spacing -->
-          
-            <a href="index.html">Home</a> |
-            <a href="interests.html">Our Specialties</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="about.html">About Me</a> |
-            <a href="contact.html">Contact Me</a>
-          
+         <ul class="links">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="interests.html">Our Specialties</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="about.html">About Me</a></li>
+           <li><a href="contact.html">Contact Me</a></li>
+         </ul>
+         <div class="toggle_btn">
+           <i class="fa-solid fa-bars"></i>
+         </div>
+ 
+         <ul class="dropdown_menu">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="interests.html">Our Specialties</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="about.html">About Me</a></li>
+           <li><a href="contact.html">Contact Me</a></li>
+         </ul>
+ 
+         <script>
+           const toggleBtn = document.querySelector('.toggle_btn');
+           const toggleBtnIcon = document.querySelector('.toggle_btn i');
+           const dropDownMenu = document.querySelector('.dropdown_menu');
+ 
+           toggleBtn.onclick = function () {
+             dropDownMenu.classList.toggle('open');
+             const isOpen = dropDownMenu.classList.contains('open');
+ 
+             toggleBtnIcon.classList = isOpen
+               ? 'fa-solid fa-xmark'
+               : 'fa-solid fa-bars';
+           };
+         </script>
       </div>
     </header>
     
     <!-- Main content of Interests page -->
      
-<div class="containerInterest">
-      <div class="sidebar">
-        <img src="images/Face2.jpg" alt="Faisal Baig" class="profile">
-        <p>
-          <img
-            src="images/linkedin.png"
-            width="20"
-            alt="LinkedIn"
-          >
-        </p>
+<main class="specialties-container">
+    <div class="profile-sidebar">
+      <img src="images/Face2.jpg" alt="Faisal Baig" class="profile-img">
+      <div class="profile-info">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" 
+             alt="LinkedIn" class="linkedin-icon">
         <h2>Faisal Baig</h2>
-        <p>IT Specialist</p>
-        <p>
+        <p class="title">IT Specialist</p>
+        <p class="contact-link">
           <strong>Let's connect:</strong>
           <a href="mailto:faisalbaig1@gmail.com">faisalbaig1@gmail.com</a>
         </p>
       </div>
-      <div class="main">
-        <div class="projects">
-          <div class="project">
-            <a target="_blank" href="images/Pic5.jpg">
-              <img
-                src="images/Pic5.jpg"
-                alt="Software Support"
-                width="600"
-                height="400"
-              >
-            </a>
-
-            <h3>IT Technician</h3>
-            <p>
-              Collaborates with in-house support specialists to analyze and
-              diagnose computer issues.
-            </p>
-          </div>
-          <div class="project">
-            <a target="_blank" href="images/Pic6.avif">
-              <img
-                src="images/Pic6.avif"
-                alt="Software Support"
-                width="600"
-                height="400"
-              >
-            </a>
-
-            <h3>Support Specialist</h3>
-            <p>
-              Review and solve computer network and hardware problems for a
-              business. Work in a variety of industries to provide general
-              support to a company's employees or at a technology or
-              software-as-a-service (SaaS) company to provide technical support
-              on user experience issues that require technical assistance.
-            </p>
-          </div>
-          <div class="project">
-            <a target="_blank" href="images/Pic7.avif">
-              <img
-                src="images/Pic7.avif"
-                alt="Software Support"
-                width="600"
-                height="400"
-              >
-            </a>
-
-            <h3>Network Engineer</h3>
-            <p>
-              Work on the day-to-day maintenance and development of a company's
-              computer network, utilizing their skills to make the network
-              available and efficient for all employees within an organization.
-            </p>
-          </div>
-          <div class="project">
-            <a target="_blank" href="images/Pic8.avif">
-              <img
-                src="images/Pic8.avif"
-                alt="Software Support"
-                width="600"
-                height="400"
-              >
-            </a>
-
-            <h3>Software Engineer</h3>
-            <p>
-              Work on enterprise applications, operating systems and network
-              control systems, which are all examples of software that can be
-              used to help businesses scale their IT infrastructure.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
 
-    
-    
-    
-    <!-- Main content Ends -->
-    
+    <div class="specialties-grid">
+      <article class="specialty-card">
+        <a href="images/Pic5.jpg" target="_blank">
+          <img src="images/Pic5.jpg" alt="IT Technician">
+        </a>
+        <h3>IT Technician</h3>
+        <p>Collaborates with in-house support specialists to analyze and diagnose computer issues.</p>
+      </article>
+
+      <article class="specialty-card">
+        <a href="images/Pic6.avif" target="_blank">
+          <img src="images/Pic6.avif" alt="Support Specialist">
+        </a>
+        <h3>Support Specialist</h3>
+        <p>Review and solve computer network and hardware problems for a business.</p>
+      </article>
+
+      <article class="specialty-card">
+        <a href="images/Pic7.avif" target="_blank">
+          <img src="images/Pic7.avif" alt="Network Engineer">
+        </a>
+        <h3>Network Engineer</h3>
+        <p>Work on the day-to-day maintenance and development of a company's computer network.</p>
+      </article>
+
+      <article class="specialty-card">
+        <a href="images/Pic8.avif" target="_blank">
+          <img src="images/Pic8.avif" alt="Software Engineer">
+        </a>
+        <h3>Software Engineer</h3>
+        <p>Work on enterprise applications, operating systems and network control systems.</p>
+      </article>
+    </div>
+</main>
+
+
     <footer>
       <div class="container">
         <div class="footer-content">

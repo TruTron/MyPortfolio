@@ -1,17 +1,20 @@
 <!-- 
     Name: Faisal Baig
-    Date: July 24, 2025
+    Date: July 27, 2025
     This is a my homepage which contains my logo and navigation bar at the top. Pages are formated using external
     stylesheet. A little paragraph about my profession and interests. At the bottom, footer is added
     with inforation about copyright, sitemap and email contact 
  -->
 
 <!DOCTYPE html>
-<!-- This declares the document type and version of HTML -->
-<html lang="en">
-  <head>
+ <html lang="en">
+   <head>
     <!-- The head section contains metadata and the page title -->
     <meta charset="UTF-8">
+    
+    <!--This makes the webpage responsive based on the device used. i.e. gives the browser instructions 
+    on how to control the page's dimensions and scaling.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!--Link to external font-awesome font family-->
     <link
@@ -41,42 +44,69 @@
               <img src="images/unionpay.svg" alt="My Logo" width="100" height="100">
             </a>
           </div>
-      
 
-          <!-- Navigation links placed horizontally using simple spacing -->
-          
-            <a href="index.html">Home</a> |
-            <a href="interests.html">Our Specialties</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="about.html">About Me</a> |
-            <a href="contact.html">Contact Me</a>
+         <ul class="links">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="interests.html">Our Specialties</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="about.html">About Me</a></li>
+           <li><a href="contact.html">Contact Me</a></li>
+         </ul>
+         <div class="toggle_btn">
+           <i class="fa-solid fa-bars"></i>
+         </div>
+ 
+         <ul class="dropdown_menu">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="interests.html">Our Specialties</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="about.html">About Me</a></li>
+           <li><a href="contact.html">Contact Me</a></li>
+         </ul>
+ 
+         <script>
+           const toggleBtn = document.querySelector('.toggle_btn');
+           const toggleBtnIcon = document.querySelector('.toggle_btn i');
+           const dropDownMenu = document.querySelector('.dropdown_menu');
+ 
+           toggleBtn.onclick = function () {
+             dropDownMenu.classList.toggle('open');
+             const isOpen = dropDownMenu.classList.contains('open');
+ 
+             toggleBtnIcon.classList = isOpen
+               ? 'fa-solid fa-xmark'
+               : 'fa-solid fa-bars';
+           };
+         </script>
       </div>
     </header>
     
     <!-- Main content of About page -->
      
-    <main>
-      <section>
-        <div class="wrapper">
-          <div class="orange-line"></div>
-          <div class="two-column-layout">
-            <div><h1>ABOUT.</h1></div>
-            <p>
-              As an IT professional I speciale in setting up small businesses
-              and call centers which plays a crucial role in designing and
-              deploying efficient and secure technical environments. My
-              expertise includes configuring workstations and servers,
-              installing essential business and communication software, and
-              building robust network infrastructures. I ensure smooth
-              connectivity, implement server and workstation curity protocols,
-              and deploy firewalls and antivirus systems to protect sensitive
-              data. My focus is on creating scalable, reliable systems tailored
-              to the operational needs of each business.
-            </p>
-          </div>
+    <main class="about-container">
+    <div class="about-content">
+      <div class="divider-line"></div>
+      <div class="about-grid">
+        <div class="about-title">
+          <h1>ABOUT.</h1>
         </div>
-      </section>
-    </main>
+        <div class="about-text">
+          <p>
+            As an IT professional I specialize in setting up small businesses
+            and call centers which plays a crucial role in designing and
+            deploying efficient and secure technical environments. My
+            expertise includes configuring workstations and servers,
+            installing essential business and communication software, and
+            building robust network infrastructures. I ensure smooth
+            connectivity, implement server and workstation security protocols,
+            and deploy firewalls and antivirus systems to protect sensitive
+            data. My focus is on creating scalable, reliable systems tailored
+            to the operational needs of each business.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
 
     <footer>
       <div class="container">

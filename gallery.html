@@ -1,17 +1,21 @@
 <!-- 
     Name: Faisal Baig
-    Date: July 24, 2025
+    Date: July 27, 2025
     This is a my homepage which contains my logo and navigation bar at the top. Pages are formated using external
     stylesheet. A little paragraph about my profession and interests. At the bottom, footer is added
     with inforation about copyright, sitemap and email contact 
  -->
 
 <!DOCTYPE html>
-<!-- This declares the document type and version of HTML -->
-<html lang="en">
-  <head>
+ <html lang="en">
+   <head>
     <!-- The head section contains metadata and the page title -->
     <meta charset="UTF-8">
+
+    <!--This makes the webpage responsive based on the device used. i.e. gives the browser instructions 
+    on how to control the page's dimensions and scaling.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     
     <!--Link to external font-awesome font family-->
     <link
@@ -30,6 +34,7 @@
     <title>Faisal Baig</title>
   </head>
 
+
   <body id="home">
     <!-- Header contains the site branding and navigation -->
     <header>
@@ -41,62 +46,89 @@
               <img src="images/unionpay.svg" alt="My Logo" width="100" height="100">
             </a>
           </div>
-      
 
-          <!-- Navigation links placed horizontally using simple spacing -->
-          
-            <a href="index.html">Home</a> |
-            <a href="interests.html">Our Specialties</a> |
-            <a href="gallery.html">Gallery</a> |
-            <a href="about.html">About Me</a> |
-            <a href="contact.html">Contact Me</a>
+         <ul class="links">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="interests.html">Our Specialties</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="about.html">About Me</a></li>
+           <li><a href="contact.html">Contact Me</a></li>
+         </ul>
+         <div class="toggle_btn">
+           <i class="fa-solid fa-bars"></i>
+         </div>
+ 
+         <ul class="dropdown_menu">
+           <li><a href="index.html">Home</a></li>
+           <li><a href="interests.html">Our Specialties</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="about.html">About Me</a></li>
+           <li><a href="contact.html">Contact Me</a></li>
+         </ul>
+ 
+         <script>
+           const toggleBtn = document.querySelector('.toggle_btn');
+           const toggleBtnIcon = document.querySelector('.toggle_btn i');
+           const dropDownMenu = document.querySelector('.dropdown_menu');
+ 
+           toggleBtn.onclick = function () {
+             dropDownMenu.classList.toggle('open');
+             const isOpen = dropDownMenu.classList.contains('open');
+ 
+             toggleBtnIcon.classList = isOpen
+               ? 'fa-solid fa-xmark'
+               : 'fa-solid fa-bars';
+           };
+         </script>
       </div>
     </header>
     
     <!-- Main content of Gallery page -->
-    <main>
-      <!-- Section tag id = hero is used in the CSS to format the text in this section -->
-
-      <section>
-        <div class="wrapper">
-          <h2>Our Services</h2>
-          <div class="orange-line"></div>
-              <div class="gallery">
-                <a target="_blank" href="images/Pic1.avif">
-                  <img src="images/Pic1.avif" alt="Customer Support" width="600" height="400">
-                </a>
-                <div class="desc">Customer Support</div>
-              </div>
-
-              <div class="gallery">
-                <a target="_blank" href="images/Pic2.avif">
-                  <img src="images/Pic2.avif" alt="Network Support" width="600" height="400">
-                </a>
-                <div class="desc">Network Support</div>
-              </div>
-
-              <div class="gallery">
-                <a target="_blank" href="images/Pic8.avif">
-                  <img src="images/Pic8.avif" alt="Installation Support" width="600" height="400">
-                </a>
-                <div class="desc">Installation Support</div>
-              </div>
-
-              <div class="gallery">
-                <a target="_blank" href="images/Pic5.jpg">
-                  <img src="images/Pic5.jpg" alt="Software Support" width="600" height="400">
-                </a>
-                <div class="desc">Software Support</div>
-              </div>
-
-              <div class="gallery">
-                <a target="_blank" href="images/Pic6.avif">
-                  <img src="images/Pic6.avif" alt="Hardware Support" width="600" height="400">
-                </a>
-                <div class="desc">Hardware Support</div>
-              </div>
+  <!-- Section tag id = hero is used in the CSS to format the text in this section -->
+ 
+    <main class="gallery-main">
+      <div class="gallery-container">
+        <h1>Our Service Gallery</h1>
+        <div class="gallery-grid">
+          <!-- Gallery items will be added here -->
+          <div class="gallery-item">
+            <a target="_blank" href="images/Pic1.avif">
+              <img src="images/Pic1.avif" alt="Customer Support">
+            </a>
+            <div class="desc">Customer Support</div>
+          </div>
+          <div class="gallery-item">
+            <a target="_blank" href="images/Pic2.avif">
+              <img src="images/Pic2.avif" alt="Customer Support">
+            </a>
+            <div class="desc">Network Support</div>
+          </div>
+          <div class="gallery-item">
+            <a target="_blank" href="images/Pic8.avif">
+              <img src="images/Pic8.avif" alt="Customer Support">
+            </a>
+            <div class="desc">Installation Support</div>
+          </div>
+          <div class="gallery-item">
+            <a target="_blank" href="images/Pic5.jpg">
+              <img src="images/Pic5.jpg" alt="Help Desk Support">
+            </a>
+            <div class="desc">Help Desk Support</div>
+          </div>
+          <div class="gallery-item">
+            <a target="_blank" href="images/Pic6.avif">
+              <img src="images/Pic6.avif" alt="Software Support">
+            </a>
+            <div class="desc">Software Support</div>
+          </div>
+          <div class="gallery-item">
+            <a target="_blank" href="images/Pic7.avif">
+              <img src="images/Pic7.avif" alt="Hardware Support">
+            </a>
+            <div class="desc">Hardware Support</div>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
 
     
