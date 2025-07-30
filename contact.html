@@ -1,6 +1,6 @@
 <!-- 
     Name: Faisal Baig
-    Date: July 28, 2025
+    Date: July 29, 2025
     This is a my homepage which contains my logo and navigation bar at the top. Pages are formated using external
     stylesheet. A little paragraph about my profession and interests. At the bottom, footer is added
     with inforation about copyright, sitemap and email contact 
@@ -63,96 +63,100 @@
            <li><a href="about.html">About Me</a></li>
            <li><a href="contact.html">Contact Me</a></li>
          </ul>
- 
-         <script>
-           const toggleBtn = document.querySelector('.toggle_btn');
-           const toggleBtnIcon = document.querySelector('.toggle_btn i');
-           const dropDownMenu = document.querySelector('.dropdown_menu');
- 
-           toggleBtn.onclick = function () {
-             dropDownMenu.classList.toggle('open');
-             const isOpen = dropDownMenu.classList.contains('open');
- 
-             toggleBtnIcon.classList = isOpen
-               ? 'fa-solid fa-xmark'
-               : 'fa-solid fa-bars';
-           };
-         </script>
       </div>
     </header>
     
   <!-- Main content of Contact page -->
    
   <main class="contact-container">
-    
-    <!-- "#" attribute specifies the URL where the form data will be submitted. 
-    In this case, the # symbol means that the form data will be submitted to 
-    the current page's URL using "POST" method" -->
-    <form action="#" method="post">
-
-        <table class="contact-form">
-          <tr>
-            <td colspan="2" class="form-header">
-              <h2>Contact us</h2>
-              <p class="subtitle">I'm open for any questions</p>
-              <p class="tagline">Thinking Outside the Cubicle</p>
-              <div class="contact-info">
-                <strong>IT Specialist</strong><br>
-                Faisal Baig<br>
-                <strong>EMAIL:</strong> faisalbaig1@gmail.com<br>
-                <strong>PHONE:</strong> +1 235 456 7890
-              </div>
-            </td>
-          </tr>
+    <div class="contact-form">
+      <h2>Request Information</h2>
+      <p class="subtitle">Complete the form below and we'll get back to you shortly</p>
+      
+      <!-- action="#" attribute specifies that the form data will be submitted to the same page -->
+      <form id="webForm" action="#">
+        <fieldset>
+          <legend>Personal Information</legend>
           
-          <tr class="form-row">
-            <td class="form-group">
-              <label for="firstName">First Name</label>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name*</label>
               <input type="text" id="firstName" name="firstName" required>
-            </td>
-            <td class="form-group">
-              <label for="lastName">Last Name</label>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name*</label>
               <input type="text" id="lastName" name="lastName" required>
-            </td>
-          </tr>
+            </div>
+          </div>
           
-          <tr class="form-row">
-            <td class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </td>
-            <td class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone">
-            </td>
-          </tr>
+          <div class="form-group">
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" required>
+          </div>
           
-          <tr class="form-row">
-            <td class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject">
-            </td>
-            <td class="form-group">
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company">
-            </td>
-          </tr>
-          
-          <tr class="form-row">
-            <td colspan="2" class="form-group full-width">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </td>
-          </tr>
-          
-          <tr class="form-row">
-            <td colspan="2" class="form-submit">
-              <button type="submit">Send Message</button>
-            </td>
-          </tr>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+        </fieldset>
 
-        </table>
-    </form>
+        <fieldset>
+          <legend>Request Details</legend>
+          
+          <div class="form-group">
+            <label for="inquiryType">Type of Inquiry*</label>
+            <select id="inquiryType" name="inquiryType" required>
+              <option value="">-- Please Select --</option>
+              <option value="general">General Information</option>
+              <option value="services">Services Inquiry</option>
+              <option value="support">Technical Support</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Preferred Contact Method*</label>
+            <div class="radio-group">
+              <label><input type="radio" name="contactMethod" value="email" checked> Email</label>
+              <label><input type="radio" name="contactMethod" value="phone"> Phone</label>
+              <label><input type="radio" name="contactMethod" value="either"> Either</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Areas of Interest (Select all that apply)</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="interests[]" value="networking"> Networking Solutions</label>
+              <label><input type="checkbox" name="interests[]" value="support"> IT Support</label>
+              <label><input type="checkbox" name="interests[]" value="software"> Software Development</label>
+              <label><input type="checkbox" name="interests[]" value="consulting"> Consulting Services</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message*</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+        </fieldset>
+        
+        <div class="form-group">
+          <label class="newsletter-label">
+            <input type="checkbox" name="newsletter" value="yes"> Sign up for our newsletter
+          </label>
+        </div>
+        
+        <div class="form-submit">
+          <button type="submit">Submit Request</button><br><br>
+
+          <!-- Clear Form button to reset the form -->
+          <button type="button" onclick="clearForm()">Clear Form</button>
+        </div>
+      </form>
+        <div><br><br>
+          <p>Sample Output</p>
+          <div id="output"></div>
+        </div>
+    </div>
   </main>
 
     <footer>
@@ -195,5 +199,6 @@
         <p>&copy; 2025 FB Inc. All rights reserved</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -11,7 +11,7 @@ body#home {
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 255, 255);
-  background-image: url("images/BlankCanvas2.jpg");
+  background-image: url("media/images/BlankCanvas2.jpg");
   /* backgroud coverage cover to cover i.e. entire page width */
   background-size:cover;
   /* backgroud position to start of page */
@@ -459,56 +459,41 @@ section#hero {
   padding: 0 1rem;
 }
 .contact-form {
-  width: 100%;
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-collapse: collapse;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.contact-form td {
-  padding: 1rem;
-  vertical-align: top;
-}
-
-.form-header {
-  text-align: center;
-  padding: 2rem !important;
-}
-
-.form-header h2 {
-  font-size: 2rem;
+.contact-form h2 {
   color: #343434;
+  text-align: center;
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  text-align: center;
   color: #666;
-  margin-bottom: 0.25rem;
+  margin-bottom: 2rem;
 }
 
-.tagline {
-  font-size: 1rem;
-  color: #f18930;
-  font-style: italic;
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.contact-info {
-  background-color: #f8f8f8;
-  padding: 1rem;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.form-row {
-  border-bottom: 1px solid #eee;
+legend {
+  font-weight: bold;
+  color: #f18930;
+  padding: 0 0.5rem;
 }
 
 .form-group {
-  padding: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .form-group label {
@@ -518,7 +503,10 @@ section#hero {
   color: #343434;
 }
 
-.form-group input,
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
 .form-group textarea {
   width: 100%;
   padding: 0.75rem;
@@ -529,6 +517,7 @@ section#hero {
 }
 
 .form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: #f18930;
@@ -539,9 +528,32 @@ section#hero {
   resize: vertical;
 }
 
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.radio-group label,
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.newsletter-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
 .form-submit {
   text-align: center;
-  padding: 1rem !important;
+  margin-top: 1.5rem;
 }
 
 .form-submit button {
@@ -553,11 +565,22 @@ section#hero {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 15rem;
 }
 
 .form-submit button:hover {
   background-color: #d97a28;
 }
+
+#output {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  border-left: 4px solid #f18930;
+}
+
+
 
 /* FOOTER */
 
@@ -766,6 +789,7 @@ a:hover {
   .contact-form td {
     display: block;
     width: 100%;
+    padding: 1.5rem
   }
     .contact-form td {
     padding: 0.75rem;
@@ -781,6 +805,7 @@ a:hover {
   
   .form-row {
     border-bottom: none;
+    flex-direction: column;
   }
   
   .footer-container,
@@ -821,7 +846,7 @@ a:hover {
   .image-main {
     max-height: 400px;
 }
-.specialties-grid {
+  .specialties-grid {
     grid-template-columns: 1fr;
   }
   
@@ -833,7 +858,7 @@ a:hover {
   .social-links {
     justify-content: center;
   }
-.about-title h1 {
+  .about-title h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
@@ -847,9 +872,13 @@ a:hover {
   }
 
   .contact-form {
-    padding: 0;
+    padding: 1rem;
   }
   
+  fieldset {
+    padding: 1rem;
+  }
+
   .form-header {
     padding: 1rem !important;
   }
